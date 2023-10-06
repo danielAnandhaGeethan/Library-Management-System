@@ -31,7 +31,10 @@ const Display = () => {
   ];
 
   return (
-    <div className="w-full bg-[#2b2f46] flex justify-center items-center">
+    <div
+      className="w-full flex justify-center items-center"
+      style={{ background: "linear-gradient(135deg, #2b2f46, #f7f7f7)" }}
+    >
       <div className="max-w-[1520px] p-20 pb-10 w-full">
         <HeroSlider
           height="85vh"
@@ -61,7 +64,7 @@ const Display = () => {
                   backgroundSize: "100% 100%",
                 }}
               >
-                <div className="w-full h-full bg-opacity-40 bg-[#2f7a92]">
+                <div className="w-full h-full bg-opacity-40 bg-[#2f7a92] z-0">
                   <div className="w-full h-full flex justify-center translate-y-10 items-center">
                     <h2 className="text-center mb-[8%] text-[240%] text-[#d1fcff] font-serif">
                       {image.text}

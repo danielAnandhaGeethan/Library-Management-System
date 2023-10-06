@@ -6,7 +6,10 @@ import { Link } from "react-router-dom/dist";
 const TopNav = ({ setSearchTerm, onSearch }) => {
   return (
     <div className="max-w-[1520px] w-full z-10 fixed">
-      <div className="flex justify-between items-center bg-[#2b2f46] p-3 shadow-lg">
+      <div
+        className="flex justify-between items-center p-3 shadow-lg"
+        style={{ background: "linear-gradient(135deg, #2b2f46, #f7f7f7)" }}
+      >
         <div className="hidden gap-2 lg:flex md:flex">
           <ImBooks size={35} />
           <h2 className="text-2xl font-bold text-black">

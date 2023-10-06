@@ -3,7 +3,7 @@ import HomeNav from "./HomeNav";
 
 const Home = () => {
   return (
-    <div className="max-w-[1520px] w-full h-screen">
+    <div className="max-w-[1520px] w-full">
       <HomeNav />
       <Display />
     </div>

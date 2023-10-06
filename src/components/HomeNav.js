@@ -3,11 +3,14 @@ import { ImBooks } from "react-icons/im";
 import { AiFillInfoCircle } from "react-icons/ai";
 import { Link } from "react-router-dom/dist";
 
-const Nav = () => {
+const HomeNav = () => {
   return (
-    <div className="max-w-[1520px] h-[10%] w-full fixed z-20">
+    <div
+      className="max-w-[1520px] h-[10%] w-full fixed z-10"
+      style={{ background: "linear-gradient(135deg, #2b2f46, #f7f7f7)" }}
+    >
       <div className="w-full">
-        <div className="flex justify-between w-full py-3 px-10 bg-[#2b2f46] shadow-lg">
+        <div className="flex justify-between w-full py-4 px-10 shadow-lg">
           <div className="flex gap-3">
             <AiFillInfoCircle size={35} className="hidden md:block lg:block" />
             <button className="text-xl text-white bg-black font-bold rounded-full px-2 py-1 hover:scale-105">
@@ -34,4 +37,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default HomeNav;

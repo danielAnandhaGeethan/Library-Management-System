@@ -64,7 +64,10 @@ const Body = ({ books, idle, data, setData }) => {
   }, [idle]);
 
   return idle === true ? (
-    <div className="w-full min-h-screen bg-[#2b2f46] pt-10">
+    <div
+      className="w-full min-h-screen pt-10"
+      style={{ background: "linear-gradient(135deg, #2b2f46, #f7f7f7)" }}
+    >
       <div className="w-full h-screen flex justify-center items-center ">
         <div className="w-[35%]">
           <h2 className="text-4xl text-black font-bold text-center">
@@ -76,7 +79,10 @@ const Body = ({ books, idle, data, setData }) => {
       </div>
     </div>
   ) : (
-    <div className="max-w-[1520px] w-full min-h-screen bg-[#2b2f46] pt-[55px]">
+    <div
+      className="max-w-[1520px] w-full min-h-screen pt-[55px]"
+      style={{ background: "linear-gradient(135deg, #2b2f46, #f7f7f7)" }}
+    >
       <SnackbarProvider />
       <div className="w-full h-full grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 overflow-x-hidden">
         {books.map((book, index) => (

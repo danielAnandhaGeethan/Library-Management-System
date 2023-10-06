@@ -28,7 +28,10 @@ const CartBody = ({ data, setData }) => {
   };
 
   return (
-    <div className="max-w-[1520px] w-full min-h-screen bg-[#2b2f46]">
+    <div
+      className="max-w-[1520px] w-full min-h-screen"
+      style={{ background: "linear-gradient(135deg, #2b2f46, #f7f7f7)" }}
+    >
       <SnackbarProvider />
       <div className="container mx-auto py-20 h-[100%]">
         {data && data.length > 0 ? (
