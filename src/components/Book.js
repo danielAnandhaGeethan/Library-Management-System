@@ -36,7 +36,7 @@ const Book = ({ book, data, setData, enqueueSnackbar }) => {
       });
     }
 
-    const id = data.length > 0 ? data[data.length - 1].id + 1 : 1;
+    const id = data && data.length > 0 ? data[data.length - 1].id + 1 : 1;
 
     const cartItem = {
       id,
@@ -46,7 +46,7 @@ const Book = ({ book, data, setData, enqueueSnackbar }) => {
       image: image !== undefined ? image : "notFound",
     };
 
-    setData([...data, cartItem]);
+    data && data.length ? setData([...data, cartItem]) : setData([cartItem]);
 
     let x = JSON.stringify(data);
     localStorage.setItem("books", x);

@@ -1,11 +1,12 @@
 import React from "react";
-import cart from "../images/cart.jpg";
 import notFound from "../images/not_found.jpg";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { SnackbarProvider, enqueueSnackbar } from "notistack";
 import { TbMoodEmpty } from "react-icons/tb";
 
 const CartBody = ({ data, setData }) => {
+  console.log(data);
+
   const onDeleteItem = (id) => {
     let x = data.filter((value) => value.id !== id);
 
@@ -27,13 +28,10 @@ const CartBody = ({ data, setData }) => {
   };
 
   return (
-    <div
-      className="max-w-[1520px] w-full min-h-screen"
-      style={{ backgroundImage: `url(${cart})`, backgroundSize: "cover" }}
-    >
+    <div className="max-w-[1520px] w-full min-h-screen bg-[#2b2f46]">
       <SnackbarProvider />
       <div className="container mx-auto py-20 h-[100%]">
-        {data !== "" && data.length > 0 ? (
+        {data && data.length > 0 ? (
           <div className="bg-transparent">
             {data.map((value, index) => (
               <div
@@ -54,7 +52,7 @@ const CartBody = ({ data, setData }) => {
                     </h2>
                     <h2
                       className="hidden absolute -translate-y-[20%] font-serif
-                    group-hover:block rounded-lg p-2 group-hover:scale-105 group-hover: bg-white group-hover:text-lg"
+                    group-hover:block rounded-lg p-2 group-hover:scale-105 group-hover: bg-white group-hover:text-lg group-hover:z-10"
                     >
                       {value.description ? value.description : ""}
                     </h2>
@@ -73,7 +71,7 @@ const CartBody = ({ data, setData }) => {
             ))}
           </div>
         ) : (
-          <div className="flex justify-center items-center h-[500px]">
+          <div className="flex justify-center items-center h-[400px]">
             <h2 className="text-white font-bold text-6xl">
               <TbMoodEmpty
                 size={200}

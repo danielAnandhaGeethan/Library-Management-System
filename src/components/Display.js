@@ -1,5 +1,4 @@
 import React from "react";
-import HomeNav from "./HomeNav";
 import first from "../images/first.jpg";
 import second from "../images/second.jpg";
 import third from "../images/third.jpg";
@@ -32,9 +31,10 @@ const Display = () => {
   ];
 
   return (
-    <div className="max-w-[1520px] h-[10%]">
-      <div className="w-full">
+    <div className="w-full bg-[#2b2f46] flex justify-center items-center">
+      <div className="max-w-[1520px] p-20 pb-10 w-full">
         <HeroSlider
+          height="85vh"
           autoplay
           controller={{
             initialSlide: 0,
@@ -56,14 +56,13 @@ const Display = () => {
             return (
               <Slide
                 key={index}
-                background={{
+                style={{
                   backgroundImage: `url(${image.url})`,
                   backgroundSize: "100% 100%",
                 }}
               >
-                <div className="w-full h-full bg-[#2f7a92] bg-opacity-40">
-                  <HomeNav />
-                  <div className="w-full flex justify-center items-center h-full ">
+                <div className="w-full h-full bg-opacity-40 bg-[#2f7a92]">
+                  <div className="w-full h-full flex justify-center translate-y-10 items-center">
                     <h2 className="text-center mb-[8%] text-[240%] text-[#d1fcff] font-serif">
                       {image.text}
                     </h2>

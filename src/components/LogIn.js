@@ -10,7 +10,7 @@ const LogIn = () => {
     <div className="max-w-[1520px] w-full flex flex-col">
       <HomeNav />
       <div
-        className="max-w-[1520px] w-full min-h-screen flex justify-center items-center bg-black bg-opacity-50 bg-cover bg-center"
+        className="max-w-[1520px] w-full pt-10 min-h-screen flex justify-center items-center bg-black bg-opacity-50 bg-cover bg-center"
         style={{
           backgroundImage: `url(${login})`,
         }}

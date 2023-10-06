@@ -5,9 +5,9 @@ import { Link } from "react-router-dom/dist";
 
 const Nav = () => {
   return (
-    <div className="max-w-[1520px] h-[10%] ">
+    <div className="max-w-[1520px] h-[10%] w-full fixed z-20">
       <div className="w-full">
-        <div className="flex justify-around py-3 px-2 bg-white">
+        <div className="flex justify-between w-full py-3 px-10 bg-[#2b2f46] shadow-lg">
           <div className="flex gap-3">
             <AiFillInfoCircle size={35} className="hidden md:block lg:block" />
             <button className="text-xl text-white bg-black font-bold rounded-full px-2 py-1 hover:scale-105">
@@ -21,10 +21,10 @@ const Nav = () => {
             </h2>
           </div>
           <div className="flex gap-3">
-            <button className="text-xl sm:text-sm text-white bg-black font-bold rounded-full px-2 py-1 hover:scale-105">
+            <button className="text-sm sm:text-xl text-white bg-black font-bold rounded-full px-2 py-1 hover:scale-105">
               <Link to="/login">Log In</Link>
             </button>
-            <button className="text-xl sm:text-sm text-white px-2 py-1 bg-black font-bold rounded-full hover:scale-105">
+            <button className="text-sm sm:text-xl text-white px-2 py-1 bg-black font-bold rounded-full hover:scale-105">
               <Link to="/signup">Sign Up</Link>
             </button>
           </div>

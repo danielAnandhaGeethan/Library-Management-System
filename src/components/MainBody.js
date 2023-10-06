@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import bg from "../images/body.jpg";
 import Book from "./Book";
 import { SnackbarProvider, enqueueSnackbar } from "notistack";
 
@@ -65,11 +64,8 @@ const Body = ({ books, idle, data, setData }) => {
   }, [idle]);
 
   return idle === true ? (
-    <div
-      className="w-full min-h-screen"
-      style={{ backgroundImage: `url(${bg})`, backgroundSize: "100% 100%" }}
-    >
-      <div className="w-full h-screen flex justify-center items-center bg-black bg-opacity-30">
+    <div className="w-full min-h-screen bg-[#2b2f46] pt-10">
+      <div className="w-full h-screen flex justify-center items-center ">
         <div className="w-[35%]">
           <h2 className="text-4xl text-black font-bold text-center">
             {quotes[index].quote} <br />
@@ -80,12 +76,9 @@ const Body = ({ books, idle, data, setData }) => {
       </div>
     </div>
   ) : (
-    <div
-      className="max-w-[1520px] w-full min-h-screen"
-      style={{ backgroundImage: `url(${bg})`, backgroundSize: "100% 100%" }}
-    >
+    <div className="max-w-[1520px] w-full min-h-screen bg-[#2b2f46] pt-[55px]">
       <SnackbarProvider />
-      <div className="w-full h-screen grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 bg-black bg-opacity-40 overflow-x-hidden">
+      <div className="w-full h-full grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 overflow-x-hidden">
         {books.map((book, index) => (
           <Book
             book={book}
